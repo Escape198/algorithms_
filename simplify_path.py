@@ -14,7 +14,7 @@ def timer(func):
 
 @profile
 @timer
-def simplify_path(path):
+def simplify_path(path: str) -> str:
     stack = []
     path = path.split('/')
     for p in path:
