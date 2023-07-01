@@ -1,3 +1,5 @@
+from memory_profiler import profile
+
 import random
 import time
 
@@ -12,6 +14,7 @@ def timer(func):
     return wrapper
 
 
+@profile
 @timer
 def int_to_roman(num: int) -> str:
     num_map = {
