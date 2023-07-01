@@ -1,3 +1,5 @@
+from memory_profiler import profile
+
 import random
 import time
 
@@ -17,6 +19,7 @@ def timer(func):
     return wrapper
 
 
+@profile
 @timer
 def binary_search(nums: list, x: int) -> int:
     left = 0
