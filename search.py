@@ -31,3 +31,4 @@ def binary_search(nums: list, x: int) -> int:
 
 
 print(binary_search(numbers, num))
+
