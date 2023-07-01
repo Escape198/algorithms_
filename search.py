@@ -18,12 +18,12 @@ def timer(func):
 
 
 @timer
-def binary_search(arr, x):
+def binary_search(nums: list, x: int) -> int:
     left = 0
     right = k-1
     while right > left + 1:
         middle = (left + right) // 2
-        if arr[middle] > x:
+        if nums[middle] > x:
             right = middle
         else:
             left = middle
