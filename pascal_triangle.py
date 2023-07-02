@@ -14,7 +14,7 @@ def timer(func):
 
 @profile
 @timer
-def triangle(numRows):
+def triangle(numRows: int) -> list:
     s = []
     for i in range(numRows):
         row = [1] * (i + 1)
