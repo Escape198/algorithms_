@@ -7,7 +7,7 @@ def timer(func):
         before = time.monotonic()
         retval = func(*args, **kwargs)
         after = time.monotonic() - before
-        print("Function {}: {} seconds".format(func.__name__, after))
+        print(f"Function {func.__name__}: {after} seconds")
         return retval
     return wrapper
 
