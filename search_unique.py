@@ -25,4 +25,15 @@ def search_num(numbers: list) -> int:
     return functools.reduce(operator.xor, numbers)
 
 
+@profile
+@timer
+def single_number(nums: list) -> int:
+    unique = 0
+    for idx in nums:
+        unique ^= idx
+    return unique
+
+
+print(single_number([1, 1, 2, 2, 3]))
 print(search_num(nums))
+
