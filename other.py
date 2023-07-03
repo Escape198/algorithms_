@@ -9,6 +9,7 @@ def reverse_bits(n: str) -> int:
     reversebin = oribin[::-1]
     return int(reversebin, 2)
 
+
 def hamming_weight(n: str) -> int:
         cnt = 0
         while n :
