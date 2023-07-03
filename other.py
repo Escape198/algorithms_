@@ -11,8 +11,12 @@ def reverse_bits(n: str) -> int:
 
 
 def hamming_weight(n: str) -> int:
-        cnt = 0
-        while n :
-            cnt += 1
-            n = n & (n-1)
-        return cnt
+    cnt = 0
+    while n :
+        cnt += 1
+        n = n & (n-1)
+    return cnt
+
+
+def is_anagram(self, s: str, t: str) -> bool:
+    return sorted(s) == sorted(t)
