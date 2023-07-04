@@ -1,4 +1,4 @@
-def single_number(self, nums):
+def single_number(self, nums: list) -> str:
         ones = 0
         twos = 0
         for num in nums:
