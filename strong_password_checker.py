@@ -1,3 +1,20 @@
+from memory_profiler import profile
+
+import time
+
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        before = time.monotonic()
+        retval = func(*args, **kwargs)
+        after = time.monotonic() - before
+        print(f"Function {func.__name__}: {after} seconds")
+        return retval
+    return wrapper
+
+
+@profile
+@timer
 def strong_password_checker(self, password):
     ans = 0 if any(c.isdigit() for c in password) else 1
     ans += 0 if any(c.islower() for c in password) else 1
