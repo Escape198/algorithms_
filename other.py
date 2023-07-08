@@ -27,3 +27,12 @@ def buddyStrings(self, s: str, goal: str) -> bool:
         return len(s) == len(goal) and (len(dic) == 2 and \
                         dic[0][0] ==dic [1][1] and dic[1][0] == dic[0][1] or \
                         (len(dic) == 0 and len(set(s)) < len(goal)))
+
+
+def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        t_ord = ord(target) - ord('a')
+        for i in letters:
+            l_ord = ord(i) - ord('a')
+            if l_ord > t_ord:
+                return i
+        return letters[0]
