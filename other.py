@@ -20,3 +20,10 @@ def hamming_weight(n: str) -> int:
 
 def is_anagram(self, s: str, t: str) -> bool:
     return sorted(s) == sorted(t)
+
+
+def buddyStrings(self, s: str, goal: str) -> bool:
+        dic = [[a, b] for a, b in zip(s, goal) if a != b]        
+        return len(s) == len(goal) and (len(dic) == 2 and \
+                        dic[0][0] ==dic [1][1] and dic[1][0] == dic[0][1] or \
+                        (len(dic) == 0 and len(set(s)) < len(goal)))
