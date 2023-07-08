@@ -22,17 +22,25 @@ def is_anagram(self, s: str, t: str) -> bool:
     return sorted(s) == sorted(t)
 
 
-def buddyStrings(self, s: str, goal: str) -> bool:
+def buddy_strings(self, s: str, goal: str) -> bool:
         dic = [[a, b] for a, b in zip(s, goal) if a != b]        
         return len(s) == len(goal) and (len(dic) == 2 and \
                         dic[0][0] ==dic [1][1] and dic[1][0] == dic[0][1] or \
                         (len(dic) == 0 and len(set(s)) < len(goal)))
 
 
-def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+def next_greatest_letter(self, letters: List[str], target: str) -> str:
         t_ord = ord(target) - ord('a')
         for i in letters:
             l_ord = ord(i) - ord('a')
             if l_ord > t_ord:
                 return i
         return letters[0]
+
+
+def equal_pairs(self, grid: List[List[int]]) -> int:
+    pairs = 0
+    cnt = Counter(tuple(row) for row in grid)
+    for tpl in zip(*grid):
+        pairs += cnt[tpl]
+    return pairs
